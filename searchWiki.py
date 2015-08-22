@@ -1,10 +1,14 @@
 import wikipedia
 
-def searchQuery():
+def searchQuery(query):
+    #query = raw_input("What do you want to search today")
+    searchResult = wikipedia.summary(query, sentences=1)   
+    return searchResult
+ 
+
+"""def searchQuery():
     query = raw_input("What do you want to search today")
-    print wikipedia.summary(query, sentences=2)   
-        
-searchQuery()
+    searchResult = wikipedia.summary(query, sentences=1)   
+    print searchResult"""
 
-
-
+#searchQuery()
